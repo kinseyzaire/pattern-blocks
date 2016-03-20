@@ -1,0 +1,9 @@
+{
+  "firebase": "pattern-blocks",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

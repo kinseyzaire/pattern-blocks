@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html  ng-app="myApp" ng-controller="simpleController">
+  <head>
+    <meta charset="utf-8">
+    <title>SHAPEBLOCKS</title>
+    <link rel="stylesheet" href="style-for-days.css">
+    <style>
+      .patternnn {
+        background-color: {{bcolor}};
+      }
+
+      .background-color {
+        fill: {{bcolor}};
+      }
+
+      .foreground-color {
+        fill: {{fcolor}};
+      }
+
+      .pattern-block {
+        width: {{size}}%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <input type="color" name="foreground-color" value="#FFFFFF" ng-model="fcolor">
+      <label>color 1</label>
+      <br>
+      <input type="color" name="background-color" value="#EEEEEE" ng-model="bcolor">
+      <label>color 2</label>
+      <br>
+      <label>pattern size</label>
+      <br>
+      <input type="range" name="size" ng-model="size" min="2" value="10" max="25" step="1">
+      <span class="logo">
+        shape blocks
+      </span>
+    </header>
+    <div class="patternnn">
+      <div ng-repeat="block in blocks track by $index">
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="js.js" type="text/javascript"></script>
+  </body>
+</html>
